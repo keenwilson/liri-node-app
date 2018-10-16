@@ -17,6 +17,9 @@ const request = require('request');
 const Spotify = require('node-spotify-api');
 const spotify = new Spotify(keys.spotify);
 
+// Load the fs package to read and write
+const fs = require("fs");
+
 
 // =======================================================================
 // Basic Nope Application
@@ -42,7 +45,7 @@ switch (command) {
     movieThis(searchQuery);
     break;
   case "do-what-it-says":
-    doWhatItSay()
+    doWhatItSay();
     break;
   case "my-tweets":
     // code block
@@ -52,6 +55,8 @@ switch (command) {
     break;
 }
 
+// Create initial variable 'result' to hold data for appending to 'log.txt'
+let result;
 
 // =======================================================================
 // Handle 'concert-this <artist/band name here>' command
@@ -75,8 +80,13 @@ function concertThis(searchQuery) {
       // And display only the top search result
       var concert = JSON.parse(body)[0];
 
-      // Build formatted 'concertResult' to display
+      // Build formatted 'concertResult' information to display
       let concertResult = "";
+
+      concertResult += "\r\n\r\n\r\n";
+      concertResult += "=========================================================\n";
+      concertResult += "Showing result for 'concert-this' " + artistname + "\n";
+      concertResult += "---------------------------------------------------------\n";
 
       if (concert.lineup) {
         concertResult += "Lineup: " + concert.lineup + "\n";
@@ -84,7 +94,7 @@ function concertThis(searchQuery) {
 
       if (concert.venue) {
         concertResult += "Name of the Venue: " + concert.venue.name + "\n";
-        concertResult += "Venue Locaion: " + concert.venue.city + ", " + concert.venue.region + ", " + concert.venue.country + "\n";
+        concertResult += "Venue Location: " + concert.venue.city + ", " + concert.venue.region + ", " + concert.venue.country + "\n";
       }
 
       if (concert.datetime) {
@@ -92,17 +102,18 @@ function concertThis(searchQuery) {
         concertResult += "Date of the Event: " + concertDateTime + "\n";
       }
 
+      concertResult += "=========================================================\n";
+      concertResult += "\r\n\r\n\r\n";
+
       // Output the formatted information to the user's terminal/bash window
-      console.log("\r\n\r\n\r\n");
-      console.log("=========================================================")
-      console.log("Showing result for 'concert-this' " + searchQuery);
-      console.log("---------------------------------------------------------")
       console.log(concertResult);
-      console.log("=========================================================")
-      console.log("\r\n\r\n\r\n");
+
+      // Output the formatted data to log.txt
+      appendLog(concertResult);
     }
 
   });
+  
 
 };
 
@@ -128,6 +139,11 @@ function spotifyThisSong(searchQuery) {
       // Build formatted 'songResult' to display
       let songResult = "";
 
+      songResult += "\r\n\r\n\r\n";
+      songResult += "=========================================================\n";
+      songResult += "Showing result for 'spotify-this-song' " + songTitle + "\n";
+      songResult += "---------------------------------------------------------\n";
+
       if (song.artists) {
         songResult += "Artist(s): " + song.artists[0].name + "\n";
       }
@@ -146,14 +162,15 @@ function spotifyThisSong(searchQuery) {
         songResult += "Album: " + song.album.name + " (Released date: " + song.album.release_date + ")\n";
       }
 
+      songResult += "=========================================================\n";
+      songResult += "\r\n\r\n\r\n";
+
       // Output the formatted information to the user's terminal/bash window
-      console.log("\r\n\r\n\r\n");
-      console.log("=========================================================")
-      console.log("Showing result for 'spotify-this-song' " + songTitle);
-      console.log("---------------------------------------------------------")
       console.log(songResult);
-      console.log("=========================================================")
-      console.log("\r\n\r\n\r\n");
+
+      // Output the formatted data to log.txt
+      appendLog(songResult);
+
 
     } else {
       return console.log('Error occurred: ' + err);
@@ -192,6 +209,11 @@ function movieThis(searchQuery) {
       // Build formatted 'concertResult' to display
       let movieResult = "";
 
+      movieResult += "\r\n\r\n\r\n";
+      movieResult += "=========================================================\n";
+      movieResult += "Showing result for 'movie-this' " + movieTitle + "\n";
+      movieResult += "---------------------------------------------------------\n";
+
       if (movie.Title) {
         movieResult += "Title of the Movie: " + movie.Title + "\n";
       }
@@ -224,14 +246,15 @@ function movieThis(searchQuery) {
         movieResult += "Actors in the Movie: " + movie.Actors + "\n";
       }
 
+      movieResult += "=========================================================\n";
+      movieResult += "\r\n\r\n\r\n";
+
       // Output the formatted information to the user's terminal/bash window
-      console.log("\r\n\r\n\r\n");
-      console.log("=========================================================")
-      console.log("Showing result for 'movie-this' " + movieTitle);
-      console.log("---------------------------------------------------------")
       console.log(movieResult);
-      console.log("=========================================================")
-      console.log("\r\n\r\n\r\n"); 
+
+      // Output the formatted data to log.txt
+      appendLog(movieResult);
+
     }
 
   });
@@ -242,10 +265,79 @@ function movieThis(searchQuery) {
 // Handle 'do-what-it-say' command
 // =======================================================================
 function doWhatItSay() {
-  
-  // Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
-  // In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
-  // Make sure you append each command you run to the log.txt file.
-  // Do not overwrite your file each time you run a command.
+  // Using the fs Node package
+  // LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+  // We will read the existing 'random.txt' file
+  // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
+  // The code will store the contents of the reading inside the variable "data"
+  fs.readFile("random.txt", "utf8", function (error, data) {
+    if (error) {
+      return console.log('Error occurred: ' + error);
+    }
+
+    // Break the string down by comma separation and store the contents into the output array
+    // Re-display the content as an array for later use
+    const output = data.split(",");
+
+    // Loop Through the newly created output array
+    for (var i = 0; i < output.length; i++) {
+
+      // Print each element (item) of the array/
+      console.log(output[i]);
+    }
+
+    let commandDoWhatItSay = output[0];
+    let searchQueryDoWhatItSay = output[1];
+
+    switch (commandDoWhatItSay) {
+      case "concert-this":
+        concertThis(searchQueryDoWhatItSay);
+        break;
+      case "spotify-this-song":
+        spotifyThisSong(searchQueryDoWhatItSay)
+        break;
+      case "movie-this":
+        movieThis(searchQueryDoWhatItSay);
+        break;
+      case "do-what-it-says":
+        doWhatItSay();
+        break;
+      case "my-tweets":
+        // code block
+        break;
+      default:
+        // code block
+        break;
+    }
+
+
+
+
+  })
+
+}
+
+// =======================================================================
+// Output the formatted result to a .txt file called log.txt
+// =======================================================================
+function appendLog(result) {
+
+    // Using the fs Node package
+    // Use the .appendFile function to append each command the user runs to the log.txt file
+    // The first parameter is the name of the text file to save to
+    // The second parameter is the data we want to write as a string
+    // The third parameter is the callback function to be called when appendFile is finished
+    // For more info, see the docs: https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback
+    fs.appendFile("log.txt", result, function (error) {
+      // If there was an error, we log it and return immediately
+      if (error) {
+        return console.log(err);
+      }
+      
+      // log that we saved the info successfully. we know that
+      // because no error was encountered, or we would have returned above
+      console.log("SAVED");
+
+    });
 }
