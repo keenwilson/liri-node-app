@@ -3,13 +3,12 @@
 An interactive Node-based command-line (**CLI**) application that takes in parameters and gives you back data. 
 
 ### What is LIRI?
-LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. 
-
-utilized Node.js, Request, Bands in Town API, and Spotify API to create an interactive command line application. At least three of these four commands works: concert-this, spotify-this-song, movie-this, do-what-it-says. 
-LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a **L**anguage **I**nterpretation and **R**ecognition **I**nterface. 
 
 ---
 ## How This App Works
+
+In this app, LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies. LIRI will take these four commands: `concert-this`, `spotify-this-song`, `movie-this`, and `do-what-it-says`. 
 
 ![concert-this](./screenshots/screenshot-concert-this.png)
 * The `node liri.js concert-this '<artist/band name here>'` command will search the Bands in Town Artist Events API for an artist and render the following information about each event to your terminal/bash window:
