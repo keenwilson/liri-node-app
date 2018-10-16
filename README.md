@@ -11,13 +11,13 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
 ---
 ## How This App Works
 
-![concert-this](./assets/screenshots/screenshot-welcome.png)
+![concert-this](./screenshots/screenshot-concert-this.png)
 * The `node liri.js concert-this '<artist/band name here>'` command will search the Bands in Town Artist Events API for an artist and render the following information about each event to your terminal/bash window:
     * Name of the venue
     * Venue location
     * Date of the Event (use `moment` to format this as "MM/DD/YYYY")
 
-![spotify-this-song](./assets/screenshots/screenshot-welcome.png)
+![spotify-this-song](./screenshots/screenshot-spotify-this-song.png)
 * The `node liri.js spotify-this-song '<song name here>'` command will output the following information about the song in your terminal/bash window:
     * Artist(s)
     * The song's name
@@ -26,7 +26,7 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
     
 If no song is provided then your program will default to "The Sign" by Ace of Base.
   
-![do-what-it-says](./assets/screenshots/screenshot-welcome.png)
+![do-what-it-says](./screenshots/screenshot-movie-this.png)
 * The `node liri.js movie-this '<movie name here>'` command will search the [OMDb API](http://www.omdbapi.com/) for a movie and show the following information to your terminal/bash window:
      * Title of the movie
     * Year the movie came out.
@@ -39,7 +39,7 @@ If no song is provided then your program will default to "The Sign" by Ace of Ba
     
 If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
-![do-what-it-says](./assets/screenshots/screenshot-welcome.png)
+![do-what-it-says](./screenshots/screenshot-do-what-it-says-spotify.png)
 * The `node liri.js do-what-it-says` command will take the text inside of random.txt and then use it to call one of LIRI's commands. 
 
 ---
