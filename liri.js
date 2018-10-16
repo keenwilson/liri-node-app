@@ -83,7 +83,6 @@ function concertThis(searchQuery) {
       // Build formatted 'concertResult' information to display
       let concertResult = "";
 
-      concertResult += "\r\n\r\n\r\n";
       concertResult += "=========================================================\n";
       concertResult += "Showing result for 'concert-this' " + artistname + "\n";
       concertResult += "---------------------------------------------------------\n";
@@ -106,7 +105,7 @@ function concertThis(searchQuery) {
       concertResult += "\r\n\r\n\r\n";
 
       // Output the formatted information to the user's terminal/bash window
-      console.log(concertResult);
+      /* console.log(concertResult); */
 
       // Output the formatted data to log.txt
       appendLog(concertResult);
@@ -125,6 +124,7 @@ function spotifyThisSong(searchQuery) {
 
   if (searchQuery.length > 0) {
     songTitle = searchQuery;
+    console.log("songTitle: ", songTitle);
   } else {
     songTitle = 'The Sign Ace of Base'
     console.log('No song is provided. The program will default to "The Sign" by Ace of Base.');
@@ -139,7 +139,6 @@ function spotifyThisSong(searchQuery) {
       // Build formatted 'songResult' to display
       let songResult = "";
 
-      songResult += "\r\n\r\n\r\n";
       songResult += "=========================================================\n";
       songResult += "Showing result for 'spotify-this-song' " + songTitle + "\n";
       songResult += "---------------------------------------------------------\n";
@@ -166,7 +165,7 @@ function spotifyThisSong(searchQuery) {
       songResult += "\r\n\r\n\r\n";
 
       // Output the formatted information to the user's terminal/bash window
-      console.log(songResult);
+      /* console.log(songResult); */
 
       // Output the formatted data to log.txt
       appendLog(songResult);
@@ -188,6 +187,7 @@ function movieThis(searchQuery) {
 
   if (searchQuery.length > 0) {
     movieTitle = searchQuery
+    console.log("movieTitle: ", movieTitle);
   } else {
     movieTitle = 'Mr. Nobody'
     console.log("The user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'")
@@ -209,7 +209,6 @@ function movieThis(searchQuery) {
       // Build formatted 'concertResult' to display
       let movieResult = "";
 
-      movieResult += "\r\n\r\n\r\n";
       movieResult += "=========================================================\n";
       movieResult += "Showing result for 'movie-this' " + movieTitle + "\n";
       movieResult += "---------------------------------------------------------\n";
@@ -250,7 +249,7 @@ function movieThis(searchQuery) {
       movieResult += "\r\n\r\n\r\n";
 
       // Output the formatted information to the user's terminal/bash window
-      console.log(movieResult);
+      /* console.log(movieResult); */
 
       // Output the formatted data to log.txt
       appendLog(movieResult);
@@ -337,7 +336,7 @@ function appendLog(result) {
       
       // log that we saved the info successfully. we know that
       // because no error was encountered, or we would have returned above
-      console.log("SAVED");
+      console.log("\nThe output data is saved.\n------------------------------");
 
     });
 }

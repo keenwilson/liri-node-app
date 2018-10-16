@@ -12,13 +12,13 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
 ## How This App Works
 
 ![concert-this](./assets/screenshots/screenshot-welcome.png)
-* The `node liri.js concert-this '<artist/band name here>'` command will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
+* The `node liri.js concert-this '<artist/band name here>'` command will search the Bands in Town Artist Events API for an artist and render the following information about each event to your terminal/bash window:
     * Name of the venue
     * Venue location
     * Date of the Event (use `moment` to format this as "MM/DD/YYYY")
 
 ![spotify-this-song](./assets/screenshots/screenshot-welcome.png)
-* The `node liri.js spotify-this-song '<song name here>'` command will show the following information about the song in your terminal/bash window:
+* The `node liri.js spotify-this-song '<song name here>'` command will output the following information about the song in your terminal/bash window:
     * Artist(s)
     * The song's name
     * A preview link of the song from Spotify
@@ -27,7 +27,7 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
 If no song is provided then your program will default to "The Sign" by Ace of Base.
   
 ![do-what-it-says](./assets/screenshots/screenshot-welcome.png)
-* The `node liri.js movie-this '<movie name here>'` command  will output data for searched movie title to your terminal/bash window:
+* The `node liri.js movie-this '<movie name here>'` command will search the [OMDb API](http://www.omdbapi.com/) for a movie and show the following information to your terminal/bash window:
      * Title of the movie
     * Year the movie came out.
     * IMDB Rating of the movie

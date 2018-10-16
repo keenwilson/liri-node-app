@@ -1,0 +1,61 @@
+=========================================================
+Showing result for 'concert-this' maroon 5
+---------------------------------------------------------
+Lineup: Maroon 5
+Name of the Venue: Mandalay Bay Events Center
+Venue Location: Las Vegas, NV, United States
+Date of the Event: Sunday, December 30th 2018, 7:00:48 pm
+=========================================================
+
+
+
+=========================================================
+Showing result for 'spotify-this-song' just the way you are
+---------------------------------------------------------
+Artist(s): Bruno Mars
+Song's name: Just The Way You Are
+A preview link of this song form Spotify: https://p.scdn.co/mp3-preview/07c6c33d6426d61ffd2e93d4c06ca599f7761b46?cid=d5f52da3416c45b2a08bf8f807712ad1
+Album: Doo-Wops & Hooligans (Released date: 2010-10-05)
+=========================================================
+
+
+
+=========================================================
+Showing result for 'movie-this' crouching tiger hidden dragon
+---------------------------------------------------------
+Title of the Movie: Crouching Tiger, Hidden Dragon
+Year the Movie Came Out: 2000
+IMDB Rating of the Movie: 7.9
+Country Where the Movie Was Produced: Taiwan, Hong Kong, USA, China
+Language of the Movie: Mandarin
+Plot of the Movie: "A young Chinese warrior steals a sword from a famed swordsman and then escapes into a world of romantic adventure with a mysterious man in the frontier of the nation."
+Actors in the Movie: Yun-Fat Chow, Michelle Yeoh, Ziyi Zhang, Chen Chang
+=========================================================
+
+
+
+=========================================================
+Showing result for 'spotify-this-song' "I Want it That Way"
+---------------------------------------------------------
+Artist(s): Backstreet Boys
+Song's name: I Want It That Way
+A preview link of this song form Spotify: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d5f52da3416c45b2a08bf8f807712ad1
+Album: The Hits--Chapter One (Released date: 2001-10-23)
+=========================================================
+
+
+
+=========================================================
+Showing result for 'movie-this' "love actually"
+---------------------------------------------------------
+Title of the Movie: Love Actually
+Year the Movie Came Out: 2003
+IMDB Rating of the Movie: 7.6
+Country Where the Movie Was Produced: UK, USA, France
+Language of the Movie: English, Portuguese, French
+Plot of the Movie: "Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England."
+Actors in the Movie: Bill Nighy, Gregor Fisher, Rory MacGregor, Colin Firth
+=========================================================
+
+
+
