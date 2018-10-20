@@ -39,7 +39,7 @@ If no song is provided then your program will default to "The Sign" by Ace of Ba
 If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
 ![do-what-it-says](./screenshots/liri-do-what-it-says.gif)
-* The `node liri.js do-what-it-says` command will take the text inside of random.txt and then use it to call one of LIRI's commands. 
+* The `node liri.js do-what-it-says` command will take the text inside of `random.txt` and then use it to call one of LIRI's commands. 
 
 ---
 ## Technical Approach
