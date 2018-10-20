@@ -16,7 +16,7 @@ In this app, LIRI will search Spotify for songs, Bands in Town for concerts, and
     * Venue location
     * Date of the Event (use `moment` to format this as "MM/DD/YYYY")
 
-![spotify-this-song](./screenshots/liri-spotify-this-song.gif)
+![spotify-this-song](./screenshots/liri-spotify-this-song1.gif)
 * The `node liri.js spotify-this-song '<song name here>'` command will output the following information about the song in your terminal/bash window:
     * Artist(s)
     * The song's name
@@ -55,4 +55,4 @@ If the user doesn't type a movie in, the program will output data for the movie 
 ---
 ## Author
 
-[Keen Wilson](https://keenwilson.github.io/ "Keen Wilson's Portfolio")
+[Keen Wilson](https://keenwilson.com "Keen Wilson's Portfolio")
