@@ -10,14 +10,13 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 In this app, LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies. LIRI will take these four commands: `concert-this`, `spotify-this-song`, `movie-this`, and `do-what-it-says`. 
 
-![Watch concert-this](./screenshots/screenshot-concert-this.png)(https://drive.google.com/file/d/1tJOyA7SNRl9KHkF4FVhXiwSvx8zKsZaN/view)
-[Click to Play](https://keenwilson.github.io/RPS-Multiplayer/ "Rock-Paper-Scissors Multiplayer")
+![concert-this](./screenshots/liri-concert-this.gif)
 * The `node liri.js concert-this '<artist/band name here>'` command will search the Bands in Town Artist Events API for an artist and render the following information about each event to your terminal/bash window:
     * Name of the venue
     * Venue location
     * Date of the Event (use `moment` to format this as "MM/DD/YYYY")
 
-![spotify-this-song](./screenshots/screenshot-spotify-this-song.png)
+![spotify-this-song](./screenshots/liri-spotify-this-song.gif)
 * The `node liri.js spotify-this-song '<song name here>'` command will output the following information about the song in your terminal/bash window:
     * Artist(s)
     * The song's name
@@ -26,7 +25,7 @@ In this app, LIRI will search Spotify for songs, Bands in Town for concerts, and
     
 If no song is provided then your program will default to "The Sign" by Ace of Base.
   
-![do-what-it-says](./screenshots/screenshot-movie-this.png)
+![do-what-it-says](./screenshots/liri-movie-this.gif)
 * The `node liri.js movie-this '<movie name here>'` command will search the [OMDb API](http://www.omdbapi.com/) for a movie and show the following information to your terminal/bash window:
      * Title of the movie
     * Year the movie came out.
@@ -39,7 +38,7 @@ If no song is provided then your program will default to "The Sign" by Ace of Ba
     
 If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
-![do-what-it-says](./screenshots/screenshot-do-what-it-says-spotify.png)
+![do-what-it-says](./screenshots/liri-do-what-it-says.gif)
 * The `node liri.js do-what-it-says` command will take the text inside of random.txt and then use it to call one of LIRI's commands. 
 
 ---
