@@ -20,33 +20,9 @@ Album: Doo-Wops & Hooligans (Released date: 2010-10-05)
 
 
 
-=========================================================
-Showing result for 'movie-this' crouching tiger hidden dragon
----------------------------------------------------------
-Title of the Movie: Crouching Tiger, Hidden Dragon
-Year the Movie Came Out: 2000
-IMDB Rating of the Movie: 7.9
-Country Where the Movie Was Produced: Taiwan, Hong Kong, USA, China
-Language of the Movie: Mandarin
-Plot of the Movie: "A young Chinese warrior steals a sword from a famed swordsman and then escapes into a world of romantic adventure with a mysterious man in the frontier of the nation."
-Actors in the Movie: Yun-Fat Chow, Michelle Yeoh, Ziyi Zhang, Chen Chang
-=========================================================
-
-
 
 =========================================================
-Showing result for 'spotify-this-song' "I Want it That Way"
----------------------------------------------------------
-Artist(s): Backstreet Boys
-Song's name: I Want It That Way
-A preview link of this song form Spotify: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d5f52da3416c45b2a08bf8f807712ad1
-Album: The Hits--Chapter One (Released date: 2001-10-23)
-=========================================================
-
-
-
-=========================================================
-Showing result for 'movie-this' "love actually"
+Showing result for 'movie-this' love actually
 ---------------------------------------------------------
 Title of the Movie: Love Actually
 Year the Movie Came Out: 2003
@@ -55,6 +31,17 @@ Country Where the Movie Was Produced: UK, USA, France
 Language of the Movie: English, Portuguese, French
 Plot of the Movie: "Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England."
 Actors in the Movie: Bill Nighy, Gregor Fisher, Rory MacGregor, Colin Firth
+=========================================================
+
+
+
+=========================================================
+Showing result for 'spotify-this-song' "I want it that way"
+---------------------------------------------------------
+Artist(s): Backstreet Boys
+Song's name: I Want It That Way
+A preview link of this song form Spotify: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d5f52da3416c45b2a08bf8f807712ad1
+Album: The Hits--Chapter One (Released date: 2001-10-23)
 =========================================================
 
 
